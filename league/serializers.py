@@ -44,6 +44,8 @@ class TableSerializer(serializers.ModelSerializer):
 
 
 class GameSerializer(serializers.ModelSerializer):
+    team_1 = TeamSerializer()
+    team_2 = TeamSerializer()
     class Meta:
         model = Game
         fields = '__all__'
